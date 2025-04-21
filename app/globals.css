@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 85% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 85% 48%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 0 85% 48%;
+    --radius: 0.5rem;
+
+    /* Custom colors */
+    --positive: 120 100% 40%;
+    --negative: 0 85% 48%;
+    --neutral: 200 100% 50%;
+
+    /* Exact colors from mood board */
+    --red: 5 89% 48%; /* #EB0914 */
+    --dark-black: 0 0% 20%; /* #333333 */
+    --dark-gray: 0 0% 47%; /* #777777 */
+    --white: 0 0% 100%; /* #FFFFFF */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#121212] text-foreground;
+    font-family: "Roboto", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  /* Panel styles */
+  .panel {
+    @apply rounded-md border border-[#333333] bg-[#1A1A1A] p-4;
+  }
+
+  /* Card styles */
+  .card {
+    @apply rounded-md border border-[#333333] bg-[#1A1A1A] p-4 shadow-md;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply rounded-md bg-[#EB0914] px-4 py-2 text-white transition-all hover:bg-[#EB0914]/90;
+  }
+
+  .btn-secondary {
+    @apply rounded-md bg-[#333333] px-4 py-2 text-white transition-all hover:bg-[#444444];
+  }
+
+  /* Glow effect for panels */
+  .glow-panel {
+    position: relative;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .glow-panel:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  }
+
+  .glow-panel::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, rgba(235, 9, 20, 0), rgba(235, 9, 20, 0.3), rgba(235, 9, 20, 0));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .glow-panel:hover::before {
+    opacity: 1;
+  }
+
+  .glow-panel.positive::before {
+    background: linear-gradient(45deg, rgba(0, 255, 0, 0), rgba(0, 255, 0, 0.3), rgba(0, 255, 0, 0));
+  }
+
+  .glow-panel.negative::before {
+    background: linear-gradient(45deg, rgba(235, 9, 20, 0), rgba(235, 9, 20, 0.3), rgba(235, 9, 20, 0));
+  }
+
+  /* Button glow effect */
+  .btn-glow {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .btn-glow::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn-glow:hover::after {
+    opacity: 1;
+  }
+
+  .btn-glow:active::after {
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 1;
+    animation: glow-flash 0.3s forwards;
+  }
+
+  @keyframes glow-flash {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+  }
+
+  /* Risk pulse animation */
+  .risk-pulse {
+    animation: risk-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes risk-pulse {
+    0%,
+    100% {
+      opacity: 1;
+      box-shadow: 0 0 0 0 rgba(235, 9, 20, 0);
+    }
+    50% {
+      opacity: 0.9;
+      box-shadow: 0 0 0 8px rgba(235, 9, 20, 0);
+    }
+  }
+
+  /* Positive pulse animation */
+  .positive-pulse {
+    animation: positive-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes positive-pulse {
+    0%,
+    100% {
+      opacity: 1;
+      box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+    }
+    50% {
+      opacity: 0.9;
+      box-shadow: 0 0 0 8px rgba(0, 255, 0, 0);
+    }
+  }
+
+  /* Neutral pulse animation */
+  .neutral-pulse {
+    animation: neutral-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes neutral-pulse {
+    0%,
+    100% {
+      opacity: 1;
+      box-shadow: 0 0 0 0 rgba(30, 144, 255, 0);
+    }
+    50% {
+      opacity: 0.9;
+      box-shadow: 0 0 0 8px rgba(30, 144, 255, 0);
+    }
+  }
+
+  /* Live data pulse */
+  .live-data-pulse {
+    position: relative;
+  }
+
+  .live-data-pulse::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #00ff00;
+    transform: translateY(-50%);
+    animation: live-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes live-pulse {
+    0% {
+      opacity: 1;
+      transform: translateY(-50%) scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+    }
+    70% {
+      opacity: 0;
+      transform: translateY(-50%) scale(1.5);
+      box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* Time warp animation */
+  .animate-time-warp {
+    animation: time-warp 2s ease-in-out;
+  }
+
+  @keyframes time-warp {
+    0% {
+      transform: perspective(400px) rotateX(0);
+      filter: brightness(1) hue-rotate(0deg);
+    }
+    10% {
+      transform: perspective(400px) rotateX(10deg);
+      filter: brightness(1.2) hue-rotate(20deg);
+    }
+    50% {
+      transform: perspective(400px) rotateX(0);
+      filter: brightness(0.8) hue-rotate(-30deg);
+    }
+    90% {
+      transform: perspective(400px) rotateX(-5deg);
+      filter: brightness(1.1) hue-rotate(10deg);
+    }
+    100% {
+      transform: perspective(400px) rotateX(0);
+      filter: brightness(1) hue-rotate(0deg);
+    }
+  }
+}
+
+@layer utilities {
+  .animate-ping-slow {
+    animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes ping-slow {
+    0% {
+      transform: scale(0.2);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.75);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+
+  /* Neon text effect */
+  .text-glow-blue {
+    text-shadow: 0 0 5px rgba(30, 144, 255, 0.5), 0 0 10px rgba(30, 144, 255, 0.3);
+  }
+
+  .text-glow-green {
+    text-shadow: 0 0 5px rgba(0, 196, 154, 0.5), 0 0 10px rgba(0, 196, 154, 0.3);
+  }
+
+  .text-glow-red {
+    text-shadow: 0 0 5px rgba(235, 9, 20, 0.5), 0 0 10px rgba(235, 9, 20, 0.3);
+  }
+
+  /* Positive value styling */
+  .value-positive {
+    @apply text-[#00FF00];
+  }
+
+  /* Negative value styling */
+  .value-negative {
+    @apply text-[#EB0914];
+  }
+
+  /* Chart line colors */
+  .chart-line-positive {
+    stroke: #00ff00;
+  }
+
+  .chart-line-negative {
+    stroke: #eb0914;
+  }
+
+  .chart-line-neutral {
+    stroke: #3b82f6;
+  }
+}
