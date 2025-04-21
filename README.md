@@ -1,103 +1,172 @@
-# Alternative Asset Explorer
+# 🛡️ Risk Control Station
 
-[![Part of RV Tool Chest](https://img.shields.io/badge/RV%20Tool%20Chest-Ecosystem-blue)](https://example.com/rvtoolchest) <!-- Replace with actual link -->
+[![Part of RV Tool Chest](https://img.shields.io/badge/RV%20Tool%20Chest-Ecosystem-blue)](https://example.com/rvtoolchest)
 
-A comprehensive dashboard for aggregating, visualizing, and analyzing alternative asset investments.
+Risk Control Station is an advanced visual tool for monitoring, stress-testing, and managing portfolio risk. Designed for sophisticated investors, analysts, and portfolio managers, it provides a full risk command center—helping you uncover vulnerabilities, explore historical impacts, and strengthen your resilience strategy.
 
-## Purpose
+---
 
-Alternative Asset Explorer aims to provide investors with a clear, unified view of their holdings in non-traditional asset classes such as real estate, collectibles, commodities, private equity, and more. Traditional investment platforms often lack robust support for these assets. This tool aggregates data (either manually entered or via potential future integrations) and offers visualization and analysis features specifically tailored for the unique characteristics of alternative investments.
+## 🎯 Purpose
 
-It serves as a central hub within the **RV Tool Chest** ecosystem for understanding the performance, risk, and diversification impact of alternative assets within a broader portfolio context.
+In a world of volatile markets and interconnected risks, the ability to visualize and manage portfolio threats is essential. **Risk Control Station** provides a high-fidelity dashboard experience to help users:
 
-## Current Features
+- Monitor real-time risk exposure  
+- Simulate past crisis events on current portfolios  
+- Set alerts on critical metrics  
+- Compare and optimize portfolio construction  
 
-*   **Overview Dashboard**: Provides a high-level summary of holdings across different alternative asset categories (e.g., Real Estate, Collectibles, Commodities). Displays key summary statistics and visualizations.
-*   **Explorer Tab**: Allows users to deep-dive into specific assets or asset classes. Includes filtering and searching capabilities to easily find and analyze individual holdings or categories.
-*   **Comparison Charts**: Visualizes historical returns and performance trends for selected assets or categories, enabling side-by-side comparisons.
-*   **Basic Metrics**: Calculates and displays essential metrics relevant to alternative assets, including:
-    *   Volatility
-    *   Compound Annual Growth Rate (CAGR)
-    *   Correlation to traditional equities (e.g., S&P 500)
+This tool is a core part of the **RV Tool Chest** for institutional-level portfolio insights.
 
-## Tech Stack
+---
 
-*   **Framework**: Next.js (React)
-*   **Language**: TypeScript
-*   **Styling**: Tailwind CSS
-*   **UI Components**: shadcn/ui
-*   **Icons**: lucide-react
-*   **Package Manager**: npm / pnpm / yarn (Specify as appropriate)
+## 🚀 Features Overview
 
-## Screenshots
+### 📊 Dashboard Overview
 
-*(Screenshots will be added here soon)*
+A centralized summary of your portfolio's health using intuitive visual cues and scoring.
 
-### Dashboard View
+![Dashboard](./screenshots/Dashboard.png)
 
-<!-- ![Dashboard Screenshot](path/to/dashboard-screenshot.png) -->
-`<image placeholder: Dashboard overview>`
+<img width="1145" alt="Dashboard" src="https://github.com/user-attachments/assets/862c69ab-6bae-4f4e-b3cf-ff8fdde9cd1a" />
 
-### Explorer Tab
 
-<!-- ![Explorer Screenshot](path/to/explorer-screenshot.png) -->
-`<image placeholder: Asset explorer tab with filters>`
 
-### Comparison View
+- Health Score with traffic light indicators  
+- Volatility, Drawdown, and Liquidity bars  
+- Correlation Storm Grid across assets  
+- Current Crisis Exposure Indicator  
 
-<!-- ![Comparison Screenshot](path/to/comparison-screenshot.png) -->
-`<image placeholder: Side-by-side asset comparison chart>`
+---
 
-## Installation
+### 📈 Portfolio Risk Trends
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-username/alternative-asset-explorer.git <!-- Replace with actual repo URL -->
-    cd alternative-asset-explorer
-    ```
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    # or
-    # pnpm install
-    # or
-    # yarn install
-    ```
-3.  **Set up environment variables:**
-    Create a `.env.local` file in the root directory and add any necessary environment variables (e.g., API keys if applicable). Refer to `.env.example` if provided.
-    ```plaintext
-    # .env.local
-    # Add environment variables here if needed
-    # NEXT_PUBLIC_API_ENDPOINT=...
-    ```
-4.  **Run the development server:**
-    ```bash
-    npm run dev
-    # or
-    # pnpm dev
-    # or
-    # yarn dev
-    ```
-5.  Open [http://localhost:3000](http://localhost:3000) (or your configured port) in your browser.
+Explore historical risk behavior and optimize mitigation strategies.
 
-## Roadmap / Future Features
+![Dashboard2](./screenshots/Dashboard2.png)
 
-*   [ ] **Data Import**: Allow users to import asset data via CSV or potentially link external accounts (e.g., real estate platforms, collectibles marketplaces).
-*   [ ] **Advanced Analytics**: Incorporate more sophisticated risk metrics (e.g., Sharpe Ratio adjusted for alternatives, downside deviation).
-*   [ ] **Scenario Modeling**: Enable users to model the impact of adding specific alternative assets to their existing traditional portfolios.
-*   [ ] **Detailed Asset Pages**: Create dedicated pages for individual assets with more granular data, documents, and notes.
-*   [ ] **Customizable Dashboards**: Allow users to personalize the widgets and metrics shown on the overview dashboard.
-*   [ ] **Integration with other RV Tool Chest Tools**: Deeper connections for seamless portfolio analysis across all asset types.
-*   [ ] **User Authentication**: Secure user accounts and portfolio data.
+<img width="1146" alt="Dashboard2" src="https://github.com/user-attachments/assets/bd27a29e-244d-410a-bc23-435eea4bfd1e" />
 
-## Credits & Contact
 
-This tool was developed by [Your Name / Your Team Name].
+- Historical drawdown trends  
+- Suggested risk mitigation: Diversification, Hedging, Stop-loss, Rebalancing  
 
-*   **Contact**: [your.email@example.com]
-*   **GitHub**: [https://github.com/your-username] <!-- Replace with actual link -->
-*   **Website**: [https://example.com/rvtoolchest] <!-- Replace with actual link -->
+---
 
-## Branding Note
+### 🧪 Risk Cauldron
 
-Alternative Asset Explorer is a component of the **RV Tool Chest**, an ecosystem of financial tools designed for comprehensive investment analysis. 
+Drag-and-drop simulator to test how asset combinations change portfolio risk.
+
+![Risk Cauldron](./screenshots/Risk%20Cauldron.png)  
+
+<img width="1140" alt="Risk Cauldron" src="https://github.com/user-attachments/assets/3f6afee7-c478-4fdf-ac32-69230a6f339d" />
+
+![Risk Cauldron 2](./screenshots/Risk%20Cauldron2.png)
+
+<img width="1142" alt="Risk Cauldron2" src="https://github.com/user-attachments/assets/de52095b-7c7e-4307-b8df-36449273b2a7" />
+
+- Assign risk scores per asset  
+- View real-time “Risk Temperature,” Diversification Score, and Volatility Level  
+
+---
+
+### 📁 My Portfolio
+
+Upload or manually build your portfolio for analysis.
+
+![My Portfolio](./screenshots/My%20Portfolio.png)  
+
+<img width="940" alt="My Portfolio" src="https://github.com/user-attachments/assets/3ead4da1-46e4-4a4a-8d90-48c9b0a1dee4" />
+
+![My Portfolio 2](./screenshots/My%20Portfolio2.png)
+
+<img width="1143" alt="My Portfolio2" src="https://github.com/user-attachments/assets/ebcf5f67-95ff-477d-8d49-dcb2c7c5b52f" />
+
+- Import via CSV (ticker, quantity, sector)  
+- Manual input with validation  
+- Analyze instantly with real-time calculations  
+
+---
+
+### 🧭 Your Risk Journey
+
+Gamified insights with percentile scores and achievement badges.
+
+![Your Risk Journey](./screenshots/Your%20Risk%20Journey.png)  
+
+<img width="1145" alt="Your Risk Journey" src="https://github.com/user-attachments/assets/3417e7c1-aa75-4bf7-b5f4-ebbc37da1a62" />
+
+![Your Risk Journey 2](./screenshots/Your%20Risk%20Journey2.png)
+
+<img width="1147" alt="Your Risk Journey2" src="https://github.com/user-attachments/assets/5b0e2bd0-f908-4c4f-ab13-62e9511ceaa8" />
+
+
+
+- Track progress against ideal stability targets  
+- Earn badges like "Crisis Survivor" or "Risk Optimizer"  
+- Benchmark against peer groups  
+
+---
+
+### ⏳ Time Travel Stress Tests
+
+Replay historical crisis events on your portfolio.
+
+![Time Travel](./screenshots/Time%20Travel%20Analysis.png)
+
+<img width="1143" alt="Time Travel Analysis" src="https://github.com/user-attachments/assets/4200e21f-f6df-4df1-84f2-b451342553f5" />
+
+
+- Test impact of events like the 2008 Financial Crisis  
+- Adjustable severity sliders  
+- Drawdown comparisons vs benchmarks  
+
+---
+
+### 🔔 Risk Alerts System
+
+Set alerts based on risk thresholds for Portfolio Beta, Value at Risk (VaR), and Correlation.
+
+![Risk Alerts](./screenshots/Risk%20Alerts.png)
+
+<img width="1147" alt="Risk Alerts" src="https://github.com/user-attachments/assets/6acc138a-7582-4cd6-8d37-e99b1213eb31" />
+
+
+
+- Email/webhook notifications  
+- Trigger conditions: above/below thresholds  
+
+---
+
+### ⚖️ Compare Portfolios
+
+Side-by-side comparison of asset weights between portfolios.
+
+![Compare Portfolios](./screenshots/Compare%20Portfolios.png)
+
+<img width="1135" alt="Compare Portfolios" src="https://github.com/user-attachments/assets/e31b4ea1-3d14-4479-9f37-cdc0962d28ab" />
+
+
+- View deltas between Manual and CSV portfolios  
+- Detect overconcentration or underexposure  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js (React)  
+- **Language**: TypeScript  
+- **Styling**: Tailwind CSS  
+- **UI Components**: shadcn/ui  
+- **Icons**: lucide-react  
+- **Charting**: Recharts / ApexCharts (optional)  
+- **Package Manager**: npm / pnpm / yarn  
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/your-username/risk-control-station.git
+cd risk-control-station
+npm install
+npm run dev
